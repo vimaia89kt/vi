@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="lo" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | ນ. ວິມາລາ ສານຸວົງ (Vimala Sanouvong)</title>
+    
+    <!-- Google Fonts: Noto Sans Lao & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans Lao"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -40px) scale(1.08)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-[#070913] dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+    <!-- Animated Gradient Mesh Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[28rem] h-[28rem] rounded-full bg-indigo-500/20 dark:bg-indigo-600/20 blur-3xl animate-blob"></div>
+        <div class="absolute top-[25%] right-[-8%] w-[26rem] h-[26rem] rounded-full bg-violet-500/20 dark:bg-violet-600/20 blur-3xl animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-10%] left-[20%] w-[30rem] h-[30rem] rounded-full bg-cyan-500/20 dark:bg-cyan-500/15 blur-3xl animate-blob" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Sticky Glass Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/75 dark:bg-[#0b0f1e]/75 border-b border-slate-200/70 dark:border-slate-800/70 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 via-violet-600 to-cyan-500 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                        ວ
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 dark:from-indigo-400 dark:via-violet-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                            Vimala.KTVC
+                        </span>
+                        <span class="text-[11px] text-slate-500 dark:text-slate-400 -mt-1 hidden sm:block">Web Design Portfolio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-1.5">
+                    <a href="#home" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/80 dark:text-slate-300 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-all">
+                        ໜ້າຫຼັກ
+                    </a>
+                    <a href="#about" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/80 dark:text-slate-300 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-all">
+                        ຂໍ້ມູນສ່ວນຕົວ
+                    </a>
+                    <a href="#education-skills" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/80 dark:text-slate-300 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-all">
+                        ການສຶກສາ & ຄວາມສາມາດ
+                    </a>
+                    <a href="#contact" class="px-4 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50/80 dark:text-slate-300 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-all">
+                        ຕິດຕໍ່
+                    </a>
+                </nav>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center gap-2.5">
+                    <button id="theme-toggle" aria-label="ສະຫຼັບໂໝດມືດ/ແຈ້ງ" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 text-slate-700 dark:text-amber-400 flex items-center justify-center border border-slate-200/70 dark:border-slate-700/70 transition-all">
+                        <i class="fa-solid fa-moon dark:hidden text-base"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline text-base"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" aria-label="ເປີດເມນູ" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center border border-slate-200/70 dark:border-slate-700/70 transition-all">
+                        <i class="fa-solid fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/70 dark:border-slate-800/70 bg-white/95 dark:bg-[#0b0f1e]/95 backdrop-blur-xl px-4 pt-2 pb-4 space-y-1">
+            <a href="#home" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-slate-200 dark:hover:bg-slate-800/70">
+                <i class="fa-solid fa-house w-5 text-indigo-500"></i> ໜ້າຫຼັກ
+            </a>
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-slate-200 dark:hover:bg-slate-800/70">
+                <i class="fa-solid fa-user w-5 text-violet-500"></i> ຂໍ້ມູນສ່ວນຕົວ
+            </a>
+            <a href="#education-skills" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-slate-200 dark:hover:bg-slate-800/70">
+                <i class="fa-solid fa-graduation-cap w-5 text-cyan-500"></i> ການສຶກສາ & ຄວາມສາມາດ
+            </a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 dark:text-slate-200 dark:hover:bg-slate-800/70">
+                <i class="fa-solid fa-paper-plane w-5 text-emerald-500"></i> ຕິດຕໍ່
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- ==================== 1. HERO SECTION ==================== -->
+        <section id="home" class="pt-12 pb-16 sm:pt-20 sm:pb-24">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
+                
+                <!-- Left Content -->
+                <div class="flex-1 text-center lg:text-left space-y-6">
+                    <!-- Welcome Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-indigo-500/10 dark:bg-indigo-500/15 border border-indigo-500/25 text-indigo-600 dark:text-cyan-300 text-xs sm:text-sm font-semibold">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-600 dark:bg-cyan-400"></span>
+                        </span>
+                        ຍິນດີຕ້ອນຮັບສູ່ Portfolio ຂອງຂ້ອຍ
+                    </div>
+
+                    <!-- Full Name & Subtitle -->
+                    <div class="space-y-3">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                            ນ. ວິມາລາ <span class="bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent">ສານຸວົງ</span>
+                        </h1>
+                        <p class="text-sm sm:text-base font-medium tracking-wide text-slate-500 dark:text-slate-400 uppercase">
+                            Vimala Sanouvong
+                        </p>
+                        <p class="text-base sm:text-xl font-semibold text-slate-700 dark:text-slate-200 pt-1 leading-relaxed">
+                            <i class="fa-solid fa-code text-indigo-500 dark:text-cyan-400 mr-1.5"></i>
+                            ນັກສຶກສາສາຂາ IT ອອກແບບເວັບໄຊ • ວິທະຍາໄລເຕັກນິກ-ວິຊາຊີບແຂວງຄຳມ່ວນ (KTVC)
+                        </p>
+                    </div>
+
+                    <!-- Personal Motto Banner -->
+                    <div class="max-w-md mx-auto lg:mx-0 p-4 rounded-2xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex items-center justify-center lg:justify-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
+                            <i class="fa-solid fa-fire text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-400 block">ຄຳຄົມປະຈຳຕົວ</span>
+                            <p class="text-lg sm:text-xl font-extrabold bg-gradient-to-r from-amber-500 to-orange-500 dark:from-amber-300 dark:to-orange-400 bg-clip-text text-transparent">
+                                “ ສູ້ຕໍ່ໄປ ”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#contact" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/45 transition-all flex items-center gap-2.5">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            ຕິດຕໍ່ຂ້ອຍ
+                        </a>
+                        <a href="#about" class="px-6 py-3.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 font-semibold border border-slate-200/90 dark:border-slate-800 backdrop-blur-md shadow-sm transition-all flex items-center gap-2.5">
+                            <i class="fa-solid fa-id-card text-indigo-500 dark:text-cyan-400"></i>
+                            ຂໍ້ມູນສ່ວນຕົວ
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Profile Card with Glowing Frame & Live Upload Preview -->
+                <div class="flex-shrink-0 flex flex-col items-center">
+                    <div class="relative p-5 rounded-3xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-2xl animate-float">
+                        <!-- Ambient Glow Behind Frame -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-indigo-500 via-violet-500 to-cyan-400 opacity-30 blur-xl -z-10"></div>
+                        
+                        <!-- Rounded-Square Glowing Profile Frame -->
+                        <div class="relative w-60 h-60 sm:w-72 sm:h-72 rounded-2xl p-1.5 bg-gradient-to-tr from-indigo-500 via-violet-500 to-cyan-400 shadow-lg overflow-hidden">
+                            <div class="w-full h-full rounded-xl overflow-hidden bg-slate-900 relative">
+                                <!-- 
+                                    Default image loads ./profile.jpg for GitHub Pages.
+                                    Fallback inline SVG avatar renders cleanly if profile.jpg is not present yet.
+                                -->
+                                <img 
+                                    id="profile-preview" 
+                                    src="./profile.jpg" 
+                                    alt="ຮູບໂປຣໄຟລ໌ ນ. ວິມາລາ ສານຸວົງ"
+                                    class="w-full h-full object-cover"
+                                    onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='bg' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%231e1b4b'/><stop offset='50%' stop-color='%23312e81'/><stop offset='100%' stop-color='%230e7490'/></linearGradient><linearGradient id='shirt' x1='0%' y1='0%' x2='100%' y2='0%'><stop offset='0%' stop-color='%236366f1'/><stop offset='100%' stop-color='%2306b6d4'/></linearGradient></defs><rect width='400' height='400' fill='url(%23bg)'/><circle cx='200' cy='155' r='85' fill='%231e293b'/><path d='M115 160 C115 90, 285 90, 285 160 L295 270 C295 280, 105 280, 105 270 Z' fill='%230f172a'/><path d='M100 370 C100 295, 300 295, 300 370 L310 400 L90 400 Z' fill='url(%23shirt)'/><rect x='182' y='225' width='36' height='45' rx='16' fill='%23fed7aa'/><circle cx='200' cy='175' r='58' fill='%23ffedd5'/><path d='M142 165 C145 110, 255 110, 258 165 C240 135, 195 130, 175 152 C160 138, 148 150, 142 165 Z' fill='%230f172a'/><circle cx='180' cy='175' r='5.5' fill='%231e293b'/><circle cx='220' cy='175' r='5.5' fill='%231e293b'/><circle cx='182' cy='173' r='2' fill='%23ffffff'/><circle cx='222' cy='173' r='2' fill='%23ffffff'/><path d='M188 198 Q200 210 212 198' stroke='%23e11d48' stroke-width='4' fill='none' stroke-linecap='round'/><circle cx='165' cy='188' r='8' fill='%23fda4af' opacity='0.6'/><circle cx='235' cy='188' r='8' fill='%23fda4af' opacity='0.6'/><rect x='135' y='315' width='130' height='75' rx='10' fill='%23cbd5e1'/><circle cx='200' cy='352' r='10' fill='%236366f1'/></svg>`);"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Interactive Profile Photo Preview Button -->
+                        <div class="mt-4 flex flex-col items-center gap-1.5">
+                            <label for="profile-upload" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600/10 hover:bg-indigo-600/20 dark:bg-cyan-500/15 dark:hover:bg-cyan-500/25 border border-indigo-500/30 dark:border-cyan-400/30 text-indigo-700 dark:text-cyan-300 text-xs sm:text-sm font-semibold cursor-pointer transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>ປ່ຽນຮູບໂປຣໄຟລ໌ (Preview)</span>
+                                <input type="file" id="profile-upload" accept="image/*" class="hidden">
+                            </label>
+                            <span class="text-[11px] text-slate-500 dark:text-slate-400">
+                                ຮອງຮັບໄຟລ໌ <code class="text-indigo-600 dark:text-cyan-400 font-mono">profile.jpg</code> ເທິງ GitHub
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 2. BENTO GRID: PERSONAL INFO & EDUCATION ==================== -->
+        <section id="about" class="py-12 sm:py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-indigo-600 dark:text-cyan-400">About & Profile</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">ຂໍ້ມູນສ່ວນຕົວ & ການສຶກສາ</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">ລາຍລະອຽດປະຫວັດສ່ວນຕົວ, ການສຶກສາ ແລະ ຄວາມສົນໃຈຂອງຂ້ອຍ</p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div id="education-skills" class="grid grid-cols-1 md:grid-cols-6 gap-6">
+                
+                <!-- Card 1: ຂໍ້ມູນສ່ວນຕົວ (Personal Bio) - Span 3 cols -->
+                <div class="md:col-span-3 p-7 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-indigo-500/40 dark:hover:border-cyan-400/40 transition-all flex flex-col justify-between space-y-6">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">ຂໍ້ມູນສ່ວນຕົວ</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Personal Biography</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="p-3.5 rounded-2xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 flex items-center gap-3.5">
+                            <i class="fa-solid fa-signature text-indigo-500 dark:text-cyan-400 w-5 text-center"></i>
+                            <div>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 block">ຊື່ ແລະ ນາມສະກຸນ</span>
+                                <span class="font-bold text-slate-900 dark:text-white">ນ. ວິມາລາ ສານຸວົງ</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 flex items-center gap-3.5">
+                            <i class="fa-solid fa-cake-candles text-violet-500 w-5 text-center"></i>
+                            <div>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 block">ວັນເດືອນປີເກີດ</span>
+                                <span class="font-bold text-slate-900 dark:text-white">9 / 3 / 2009</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 flex items-center gap-3.5">
+                            <i class="fa-solid fa-location-dot text-rose-500 w-5 text-center"></i>
+                            <div>
+                                <span class="text-xs text-slate-500 dark:text-slate-400 block">ທີ່ຢູ່ປັດຈຸບັນ</span>
+                                <span class="font-bold text-slate-900 dark:text-white">ບ້ານ ແຕນ, ເມືອງ ມະຫາໄຊ, ແຂວງ ຄຳມ່ວນ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: ການສຶກສາ (Education) - Span 3 cols -->
+                <div class="md:col-span-3 p-7 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-cyan-500/40 transition-all flex flex-col justify-between space-y-6">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">ການສຶກສາ</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Education & Academic Major</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-cyan-500/10 border border-indigo-500/20 dark:border-cyan-400/20">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-semibold text-indigo-600 dark:text-cyan-400 uppercase tracking-wider">ສະຖາບັນການສຶກສາ</span>
+                                    <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-0.5 leading-snug">
+                                        ວິທະຍາໄລເຕັກນິກ-ວິຊາຊີບແຂວງຄຳມ່ວນ (KTVC)
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-slate-100/70 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider">ສາຂາຮຽນ</span>
+                                    <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-0.5">
+                                        IT ອອກແບບເວັບໄຊ (Web Design)
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                                        ມຸ່ງໝັ້ນພັດທະນາທັກສະການອອກແບບ UI/UX ແລະ ການສ້າງເວັບໄຊທີ່ທັນສະໄໝ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: ຄວາມສາມາດພິເສດ (Special Ability) - Span 2 cols -->
+                <div class="md:col-span-2 p-7 rounded-3xl bg-gradient-to-br from-violet-600/15 via-indigo-600/15 to-cyan-500/15 dark:from-violet-900/35 dark:via-indigo-900/35 dark:to-cyan-900/30 backdrop-blur-xl border border-violet-500/30 dark:border-violet-400/30 shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-8xl text-violet-500/10 group-hover:scale-110 transition-transform pointer-events-none">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    
+                    <div class="relative z-10 flex flex-col h-full justify-between space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-700 dark:text-violet-300 text-xs font-bold">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> ຄວາມສາມາດພິເສດ
+                            </span>
+                            <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-violet-600 to-fuchsia-500 text-white flex items-center justify-center shadow-lg shadow-violet-500/30 animate-pulse">
+                                <i class="fa-solid fa-eye text-lg"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 py-2">
+                            <h3 class="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-violet-600 to-fuchsia-500 dark:from-violet-300 dark:to-cyan-300 bg-clip-text text-transparent">
+                                “ອ່ານໃຈຄົນໄດ້”
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                ມີຄວາມເຂົ້າໃຈຄວາມຮູ້ສຶກ, ອາລົມ ແລະ ມຸມມອງຂອງຄົນອ້ອມຂ້າງໄດ້ເປັນຢ່າງດີ (High Empathy & Intuition)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: ສິ່ງທີ່ມັກ & ງານອະດິເລກ (Hobbies & Interests) - Span 4 cols -->
+                <div class="md:col-span-4 p-7 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-indigo-500/40 transition-all flex flex-col justify-between space-y-6">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-pink-500/15 text-pink-600 dark:text-pink-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">ສິ່ງທີ່ມັກ & ງານອະດິເລກ</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Hobbies & Favorite Activities</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+                        <!-- ຟັງເພງ -->
+                        <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-indigo-400 hover:-translate-y-1 transition-all flex flex-col items-center text-center gap-2.5">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-headphones-simple"></i>
+                            </div>
+                            <span class="font-bold text-sm text-slate-800 dark:text-slate-100">ຟັງເພງ</span>
+                        </div>
+
+                        <!-- ຫຼິ້ນເກມ -->
+                        <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-violet-400 hover:-translate-y-1 transition-all flex flex-col items-center text-center gap-2.5">
+                            <div class="w-12 h-12 rounded-2xl bg-violet-500/15 text-violet-600 dark:text-violet-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+                            <span class="font-bold text-sm text-slate-800 dark:text-slate-100">ຫຼິ້ນເກມ</span>
+                        </div>
+
+                        <!-- ເບິ່ງໜັງ -->
+                        <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-cyan-400 hover:-translate-y-1 transition-all flex flex-col items-center text-center gap-2.5">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <span class="font-bold text-sm text-slate-800 dark:text-slate-100">ເບິ່ງໜັງ</span>
+                        </div>
+
+                        <!-- ອ່ານໜັງສື -->
+                        <div class="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-amber-400 hover:-translate-y-1 transition-all flex flex-col items-center text-center gap-2.5">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <span class="font-bold text-sm text-slate-800 dark:text-slate-100">ອ່ານໜັງສື</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: ຄຳຄົມປະຈຳຕົວ (Personal Motto Centerpiece) - Span 6 cols -->
+                <div class="md:col-span-6 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-600 text-white shadow-xl relative overflow-hidden text-center">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_60%)] pointer-events-none"></div>
+                    <div class="relative z-10 max-w-2xl mx-auto space-y-3">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-quote-left"></i> ຄຳຄົມປະຈຳຕົວ (Personal Motto)
+                        </div>
+                        <h3 class="text-3xl sm:text-5xl font-extrabold tracking-tight pt-1">
+                            “ ສູ້ຕໍ່ໄປ ”
+                        </h3>
+                        <p class="text-sm sm:text-base text-indigo-100 font-medium">
+                            ບໍ່ວ່າຈະພົບອຸປະສັກໃດໆໃນການຮຽນ ແລະ ການອອກແບບເວັບໄຊ ກໍຈະບໍ່ຍອມແພ້ ແລະ ພັດທະນາຕົນເອງສະເໝີ
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 3. CONTACT SECTION ==================== -->
+        <section id="contact" class="py-12 sm:py-20">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-indigo-600 dark:text-cyan-400">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">ຊ່ອງທາງການຕິດຕໍ່</h2>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">ສາມາດຕິດຕໍ່ສອບຖາມ ຫຼື ແລກປ່ຽນຄວາມຮູ້ດ້ານການອອກແບບເວັບໄຊໄດ້ເລີຍ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <!-- Phone Card -->
+                <div class="p-6 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">ເບີໂທລະສັບ</span>
+                            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white mt-0.5">020 98101566</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 pt-1">
+                        <a href="tel:98101566" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold text-center transition-colors">
+                            <i class="fa-solid fa-phone mr-1"></i> ໂທອອກ
+                        </a>
+                        <button onclick="copyText('98101566', 'ຄັດລອກເບີໂທ 98101566 ແລ້ວ!')" class="py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-colors" title="ຄັດລອກເບີໂທ">
+                            <i class="fa-regular fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="p-6 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">ອີເມວ (Email)</span>
+                            <h3 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-0.5 truncate" title="visanouvong52@gmail.com">visanouvong52@gmail.com</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 pt-1">
+                        <a href="mailto:visanouvong52@gmail.com" class="flex-1 py-2.5 px-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold text-center transition-colors">
+                            <i class="fa-solid fa-paper-plane mr-1"></i> ສົ່ງເມວ
+                        </a>
+                        <button onclick="copyText('visanouvong52@gmail.com', 'ຄັດລອກອີເມວ visanouvong52@gmail.com ແລ້ວ!')" class="py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-colors" title="ຄັດລອກອີເມວ">
+                            <i class="fa-regular fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Location Card -->
+                <div class="p-6 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">ທີ່ຢູ່</span>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white mt-1 leading-relaxed">
+                                ບ້ານ ແຕນ, ເມືອງ ມະຫາໄຊ, ແຂວງ ຄຳມ່ວນ
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="pt-1">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-rose-600 dark:text-rose-400">
+                            <i class="fa-solid fa-location-pin"></i> Khammouane, Laos
+                        </span>
+                    </div>
+                </div>
+
+                <!-- GitHub Profile Card -->
+                <div class="p-6 rounded-3xl bg-white/75 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 dark:bg-white/15 text-white flex items-center justify-center text-xl">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">GitHub Profile</span>
+                            <h3 class="text-base font-extrabold text-slate-900 dark:text-white mt-0.5">Vimala Sanouvong</h3>
+                        </div>
+                    </div>
+                    <div class="pt-1">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-brands fa-github"></i> ເຂົ້າເບິ່ງ GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-slate-200/80 dark:border-slate-800/80 py-8 px-4 mt-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
+                © 2026 ນ. ວິມາລາ ສານຸວົງ | ວິທະຍາໄລເຕັກນິກ-ວິຊາຊີບແຂວງຄຳມ່ວນ (KTVC)
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="px-4 py-3 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs sm:text-sm font-bold shadow-2xl flex items-center gap-2.5 border border-slate-700 dark:border-slate-200">
+            <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600 text-base"></i>
+            <span id="toast-msg">ສຳເລັດ!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Toast Notification Helper
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        // Copy to Clipboard Helper (iFrame & browser safe)
+        function copyText(text, successMsg) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(successMsg);
+        }
+
+        // Dark / Light Theme Toggle (Defaults to Dark Mode)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('vimala_theme') === 'light') {
+            htmlEl.classList.remove('dark');
+        } else {
+            htmlEl.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            const isDark = htmlEl.classList.contains('dark');
+            localStorage.setItem('vimala_theme', isDark ? 'dark' : 'light');
+        });
+
+        // Mobile Navigation Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Live Profile Image Preview via FileReader
+        const profileUpload = document.getElementById('profile-upload');
+        const profilePreview = document.getElementById('profile-preview');
+
+        profileUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    profilePreview.src = event.target.result;
+                    showToast('ອັບໂຫຼດຮູບໂປຣໄຟລ໌ຕົວຢ່າງສຳເລັດ!');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
