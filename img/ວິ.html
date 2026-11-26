@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="lo" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ວິໂມບາຍ (Vi Mobile) - iPhone 18 Pro Max</title>
+    <!-- ໂຫຼດ Tailwind CSS ສຳລັບການຈັດວາງ ແລະ ຕົກແຕ່ງ -->
+    <script src=ວິ,html
+    <!-- ດຶງຟອນພາສາລາວ Noto Sans Lao ຈາກ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans Lao"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- 1. ແຖບເມນູດ້ານເທິງ (Sticky Glass Navbar) -->
+    <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md text-white border-b border-slate-800 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- ໂລໂກ້ຮ້ານ ວິໂມບາຍ -->
+            <a href="#home" class="flex items-center gap-2.5 group">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-slate-950 font-black text-lg sm:text-xl shadow-md group-hover:scale-105 transition">
+                    V
+                </div>
+                <div>
+                    <span class="text-lg sm:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-amber-300 bg-clip-text text-transparent">
+                        ວິໂມບາຍ
+                    </span>
+                    <span class="hidden sm:inline-block text-xs text-amber-400 font-semibold ml-1.5 tracking-widest uppercase">Vi Mobile</span>
+                </div>
+            </a>
+
+            <!-- ເມນູນຳທາງ -->
+            <nav class="flex items-center space-x-4 sm:space-x-8">
+                <a href="#home" class="text-sm sm:text-base font-medium text-slate-300 hover:text-amber-400 transition py-2">ໜ້າຫຼັກ</a>
+                <a href="#specs" class="text-sm sm:text-base font-medium text-slate-300 hover:text-amber-400 transition py-2">ສະເປັກເຄື່ອງ</a>
+                <a href="#order" class="text-sm sm:text-base font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-300 hover:to-yellow-400 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl shadow-md shadow-amber-500/20 transition">
+                    ສັ່ງຊື້ເລີຍ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. ສ່ວນ Hero Section (Dark Luxury Theme ສະແດງ iPhone 18 Pro Max) -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-12 sm:py-20">
+        <!-- ແສງປະກາຍພື້ນຫຼັງ -->
+        <div class="absolute top-10 left-1/4 w-72 h-72 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                
+                <!-- ຝັ່ງຊ້າຍ: ຮູບພາບໂທລະສັບ iPhone 18 Pro Max -->
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- ກອບແສງຫຼູຫຼາ -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-amber-500/40 via-slate-700/30 to-blue-500/40 rounded-[2.2rem] blur-lg"></div>
+                        <div class="relative bg-slate-900/90 border border-slate-800 rounded-[2rem] p-4 sm:p-6 shadow-2xl">
+                            <div class="flex items-center justify-between mb-3 px-1">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">● ຮັບປະກັນສູນແທ້ 100%</span>
+                                <span id="badge-color-text" class="text-xs text-slate-400 font-medium">ສີ: Desert Titanium</span>
+                            </div>
+                            <img 
+                                id="phone-image"
+                                src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=900&q=85" 
+                                alt="iPhone 18 Pro Max ຮ້ານວິໂມບາຍ"
+                                onerror="this.src='https://placehold.co/800x900/0f172a/fbbf24?text=iPhone+18+Pro+Max'"
+                                class="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-xl transition-all duration-500"
+                            >
+                            <!-- ແຖບສະແດງສະເປັກຫຍໍ້ໃຕ້ຮູບ -->
+                            <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                                <div class="bg-slate-800/80 rounded-xl py-2 px-1 border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">ໜ້າຈໍ</div>
+                                    <div class="text-sm font-bold text-white">6.9" XDR</div>
+                                </div>
+                                <div class="bg-slate-800/80 rounded-xl py-2 px-1 border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">ຊິບປະມວນຜົນ</div>
+                                    <div class="text-sm font-bold text-amber-400">A20 Pro</div>
+                                </div>
+                                <div class="bg-slate-800/80 rounded-xl py-2 px-1 border border-slate-700/50">
+                                    <div class="text-xs text-slate-400">ກ້ອງຫຼັກ</div>
+                                    <div class="text-sm font-bold text-white">48MP 10x</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ຝັ່ງຂວາ: ຊື່ລຸ້ນ, ລາຄາ, ຕົວເລືອກສີ ແລະ ຄວາມຈຳ -->
+                <div class="order-2 lg:order-1 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                        <span>✨ ລຸ້ນໃໝ່ລ່າສຸດ • ພ້ອມສົ່ງທັນທີ</span>
+                    </div>
+
+                    <div>
+                        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                            iPhone 18 Pro Max
+                        </h1>
+                        <p class="mt-3 text-base sm:text-lg text-slate-300 leading-relaxed">
+                            ສຸດຍອດສະມາດໂຟນລະດັບເຮືອທຸງ ຕົວເຄື່ອງໄທທານຽມສຸດແກ່ງ ພ້ອມຊິບ <strong class="text-white">A20 Pro</strong> ແລະ ກ້ອງຊູມລະດັບມືອາຊີບ.
+                        </p>
+                    </div>
+
+                    <!-- ກ່ອງລາຄາພິເສດ -->
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-inner">
+                        <div class="text-xs sm:text-sm text-slate-400 mb-1">
+                            ລາຄາປົກກະຕິ: <span class="line-through text-slate-500 font-semibold">7,200,000 ກີບ</span>
+                            <span class="ml-2 bg-red-500/20 text-red-400 text-xs font-bold px-2 py-0.5 rounded-md">ປະຢັດທັນທີ!</span>
+                        </div>
+                        <div class="flex flex-wrap items-baseline justify-center lg:justify-start gap-2">
+                            <span id="display-price" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-400 tracking-tight">
+                                5,990,000 ກີບ
+                            </span>
+                        </div>
+                        <div class="text-xs sm:text-sm text-slate-400 mt-1.5">
+                            (ຫ້າລ້ານເກົ້າແສນເກົ້າສິບພັນກີບ • ແຖມຟຣີຟິມກັນແຕກ + ເຄສໃສ)
+                        </div>
+                    </div>
+
+                    <!-- ຕົວເລືອກສີ (Color Selector) -->
+                    <div class="space-y-2.5">
+                        <label class="block text-sm font-semibold text-slate-300">
+                            ເລືອກສີຕົວເຄື່ອງ: <span id="selected-color-label" class="text-amber-400 font-bold">Desert Titanium (ສີທອງໄທທານຽມ)</span>
+                        </label>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                            <button type="button" onclick="selectColor('Desert Titanium (ສີທອງໄທທານຽມ)', 'Desert Titanium', this)" 
+                                class="color-btn ring-2 ring-amber-400 ring-offset-2 ring-offset-slate-950 w-10 h-10 rounded-full bg-[#d4af87] shadow-md transition transform hover:scale-110" 
+                                title="Desert Titanium"></button>
+                            
+                            <button type="button" onclick="selectColor('Natural Titanium (ສີເທົາທຳມະຊາດ)', 'Natural Titanium', this)" 
+                                class="color-btn w-10 h-10 rounded-full bg-[#9a9893] shadow-md transition transform hover:scale-110 opacity-80 hover:opacity-100" 
+                                title="Natural Titanium"></button>
+                            
+                            <button type="button" onclick="selectColor('Black Titanium (ສີດຳໄທທານຽມ)', 'Black Titanium', this)" 
+                                class="color-btn w-10 h-10 rounded-full bg-[#242528] border border-slate-600 shadow-md transition transform hover:scale-110 opacity-80 hover:opacity-100" 
+                                title="Black Titanium"></button>
+                            
+                            <button type="button" onclick="selectColor('White Titanium (ສີຂາວໄທທານຽມ)', 'White Titanium', this)" 
+                                class="color-btn w-10 h-10 rounded-full bg-[#f2f1ed] shadow-md transition transform hover:scale-110 opacity-80 hover:opacity-100" 
+                                title="White Titanium"></button>
+                        </div>
+                    </div>
+
+                    <!-- ຕົວເລືອກຄວາມຈຳ (Storage Selector) -->
+                    <div class="space-y-2.5">
+                        <label class="block text-sm font-semibold text-slate-300">
+                            ເລືອກຄວາມຈຳ (Storage):
+                        </label>
+                        <div class="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+                            <button type="button" onclick="selectStorage('256GB', '5,990,000 ກີບ', this)" 
+                                class="storage-btn bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-xl border-2 border-amber-400 shadow-md transition text-sm sm:text-base">
+                                256GB
+                            </button>
+                            <button type="button" onclick="selectStorage('512GB', '6,490,000 ກີບ', this)" 
+                                class="storage-btn bg-slate-900 text-slate-300 hover:text-white font-bold py-3 px-4 rounded-xl border-2 border-slate-700 hover:border-amber-400/60 transition text-sm sm:text-base">
+                                512GB
+                            </button>
+                            <button type="button" onclick="selectStorage('1TB', '6,990,000 ກີບ', this)" 
+                                class="storage-btn bg-slate-900 text-slate-300 hover:text-white font-bold py-3 px-4 rounded-xl border-2 border-slate-700 hover:border-amber-400/60 transition text-sm sm:text-base">
+                                1TB
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ປຸ່ມກົດສັ່ງຊື້ຫຼັກ -->
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                        <a id="hero-whatsapp-btn" href="https://wa.me/8562055558888?text=ສະບາຍດີ%20ຮ້ານວິໂມບາຍ%20ສົນໃຈສັ່ງຊື້%20iPhone%2018%20Pro%20Max%20(256GB)%20ສີ%20Desert%20Titanium%20ລາຄາ%205,990,000%20ກີບ" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-300 hover:to-yellow-400 active:scale-95 text-slate-950 font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-xl shadow-amber-500/25 transition-all">
+                            <span>🛒 ສັ່ງຊື້ຜ່ານ WhatsApp ທັນທີ</span>
+                        </a>
+                        <a href="#specs" class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-white font-semibold text-base px-6 py-4 rounded-2xl border border-slate-700 transition">
+                            ເບິ່ງສະເປັກເຕັມ
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ສ່ວນສະເປັກ ແລະ ຂໍ້ມູນສິນຄ້າ (Specifications Section) -->
+    <section id="specs" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-amber-600 font-bold text-sm uppercase tracking-wider">Specifications</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-1">
+                    ✨ ຈຸດເດັ່ນ ແລະ ສະເປັກລະດັບໂປຣ
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    ອອກແບບມາເພື່ອຄວາມແຮງ ແລະ ຄວາມສົມບູນແບບໃນທຸກການໃຊ້ງານ
+                </p>
+            </div>
+
+            <!-- ຕາຕະລາງກ່ອງສະເປັກ 6 ຈຸດເດັ່ນ -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- 1. ໜ້າຈໍ -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200/80 hover:border-amber-400 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-4">
+                        📱
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">ຈໍພາບ Super Retina XDR 6.9 ນິ້ວ</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ໜ້າຈໍໃຫຍ່ເຕັມຕາ ຂອບບາງเฉียบ ພ້ອມເທັກໂນໂລຢີ ProMotion 120Hz ສະແດງຜົນລື່ນໄຫຼ ສູ້ແສງແດດໄດ້ດີเยี่ยม.
+                    </p>
+                </div>
+
+                <!-- 2. ຊິບ A20 Pro -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200/80 hover:border-amber-400 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mb-4">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">ຊິບປະມວນຜົນ A20 Pro</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ແຮງລື່ນທຸກຂີດຈຳກັດ ຫຼິ້ນເກມກຣາບຟິກສູງໄດ້ສະບາຍ ຕັດຕໍ່ວິດີໂອ 4K ໄວທັນໃຈ ພ້ອມລະບົບ AI ອັດສະລິຍະ.
+                    </p>
+                </div>
+
+                <!-- 3. ກ້ອງ Pro 48MP -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200/80 hover:border-amber-400 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl mb-4">
+                        📸
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">ກ້ອງ Pro 48MP ຊູມ 10x</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ຖ່າຍຮູບຄົມຊັດທຸກສະພາບແສງ ທັງກາງເວັນ ແລະ ກາງຄືນ ພ້ອມເລນ Telephoto ຊູມໄກ 10x ແບບບໍ່ເສຍລາຍລະອຽດ.
+                    </p>
+                </div>
+
+                <!-- 4. ແບັດເຕີຣີ -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200/80 hover:border-amber-400 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-4">
+                        🔋
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">ແບັດເຕີຣີທົນທານ ໃຊ້ໄດ້ໝົດມື້</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ຫຼິ້ນວິດີໂອຕໍ່ເນື່ອງໄດ້ຍາວນານສູງສຸດ 33 ຊົ່ວໂມງ ຮອງຮັບລະບົບສາກໄວ USB-C ແລະ MagSafe ໄຮ້ສາຍ.
+                    </p>
+                </div>
+
+                <!-- 5. 5G & ການເຊື່ອມຕໍ່ -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200/80 hover:border-amber-400 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-2xl mb-4">
+                        📶
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">ຮອງຮັບ 5G ຄວາມໄວສູງ</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ດາວໂຫຼດ ແລະ ໄລຟ໌ສົດໄດ້ບໍ່ສະດຸດ ຮອງຮັບທຸກເຄືອຂ່າຍໃນລາວ (Unitel, Lao Telecom, Tplus).
+                    </p>
+                </div>
+
+                <!-- 6. ການຮັບປະກັນ -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200/80 hover:border-amber-400 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl mb-4">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">ກັນນ້ຳ IP68 & ຮັບປະກັນ 1 ປີ</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ມາດຕະຖານກັນນ້ຳ ແລະ ກັນຝຸ່ນ IP68 ພ້ອມໃບຮັບປະກັນຈາກຮ້ານ ວິໂມບາຍ ໝັ້ນໃຈໄດ້ເຕັມຮ້ອຍ.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ສ່ວນຕິດຕໍ່ສັ່ງຊື້ & ການຈັດສົ່ງ (Contact & Order Section) -->
+    <section id="order" class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+            <div class="space-y-3">
+                <span class="inline-block px-4 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-bold border border-emerald-500/30">
+                    🚚 ບໍລິການຈັດສົ່ງດ່ວນທົ່ວປະເທດ
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold">
+                    ສັ່ງຊື້ກັບຮ້ານ <span class="text-amber-400">ວິໂມບາຍ (Vi Mobile)</span>
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    ມີບໍລິການຈັດສົ່ງຮອດໜ້າບ້ານທົ່ວປະເທດ <strong>(ມີບໍລິການເກັບເງິນປາຍທາງ COD)</strong> ກວດເຊັກສິນຄ້າກ່ອນຈ່າຍເງິນໄດ້ເລີຍ!
+                </p>
+            </div>
+
+            <!-- ສະຫຼຸບລາຍການທີ່ເລືອກ -->
+            <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 max-w-lg mx-auto text-left flex items-center justify-between gap-4">
+                <div>
+                    <div class="text-xs text-slate-400">ລາຍການທີ່ທ່ານເລືອກ:</div>
+                    <div id="summary-text" class="text-sm sm:text-base font-bold text-white mt-0.5">
+                        iPhone 18 Pro Max (256GB) - Desert Titanium
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <div class="text-xs text-slate-400">ລາຄາລວມ:</div>
+                    <div id="summary-price" class="text-base sm:text-lg font-extrabold text-amber-400">
+                        5,990,000 ກີບ
+                    </div>
+                </div>
+            </div>
+
+            <!-- ປຸ່ມຕິດຕໍ່ WhatsApp ແລະ Facebook -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <a id="footer-whatsapp-btn" href="https://wa.me/8562055558888?text=ສະບາຍດີ%20ຮ້ານວິໂມບາຍ%20ສົນໃຈສັ່ງຊື້%20iPhone%2018%20Pro%20Max%20(256GB)%20ສີ%20Desert%20Titanium%20ລາຄາ%205,990,000%20ກີບ" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] active:scale-95 text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-lg shadow-emerald-600/25 transition-all">
+                    <span class="text-xl">💬</span>
+                    <span>ທັກແຊັດສັ່ງຊື້ WhatsApp</span>
+                </a>
+
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#1877F2] hover:bg-[#166fe5] active:scale-95 text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-lg shadow-blue-600/25 transition-all">
+                    <span class="text-xl">📘</span>
+                    <span>ຕິດຕໍ່ຜ່ານ Facebook Page</span>
+                </a>
+            </div>
+
+            <div class="pt-4 text-xs sm:text-sm text-slate-400 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <span>📍 ສາຂາຫຼັກ: ນະຄອນຫຼວງວຽງຈັນ & ທ່າແຂກ</span>
+                <span>📞 ໂທສອບຖາມ: 020 5555 8888</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ສ່ວນທ້າຍເວັບໄຊ (Footer) -->
+    <footer class="bg-slate-950 text-slate-400 py-8 px-4 border-t border-slate-900 text-center">
+        <div class="max-w-6xl mx-auto space-y-2">
+            <div class="text-white font-bold text-base">
+                ວິໂມບາຍ (Vi Mobile) — ສູນຈຳໜ່າຍໂທລະສັບມືຖື ແລະ ອຸປະກອນເສີມຄົບວົງຈອນ
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500">
+                © 2026 ວິໂມບາຍ (Vi Mobile). ສະຫງວນລິຂະສິດທັງໝົດ.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript ສຳລັບການປ່ຽນສີ, ປ່ຽນຄວາມຈຳ ແລະ ອັບເດດຂໍ້ຄວາມສັ່ງຊື້ WhatsApp ອັດຕະໂນມັດ -->
+    <script>
+        let currentColor = 'Desert Titanium (ສີທອງໄທທານຽມ)';
+        let currentShortColor = 'Desert Titanium';
+        let currentStorage = '256GB';
+        let currentPrice = '5,990,000 ກີບ';
+
+        // ເບີ WhatsApp ຂອງຮ້ານ (ສາມາດປ່ຽນເປັນເບີແທ້ຂອງຮ້ານໄດ້ເລີຍ)
+        const shopPhone = '8562055558888';
+
+        function updateOrderLinks() {
+            const message = `ສະບາຍດີ ຮ້ານວິໂມບາຍ ສົນໃຈສັ່ງຊື້ iPhone 18 Pro Max (${currentStorage}) ສີ ${currentShortColor} ລາຄາ ${currentPrice}`;
+            const encodedUrl = `https://wa.me/${shopPhone}?text=${encodeURIComponent(message)}`;
+
+            document.getElementById('hero-whatsapp-btn').href = encodedUrl;
+            document.getElementById('footer-whatsapp-btn').href = encodedUrl;
+            document.getElementById('summary-text').textContent = `iPhone 18 Pro Max (${currentStorage}) - ${currentShortColor}`;
+            document.getElementById('summary-price').textContent = currentPrice;
+        }
+
+        function selectColor(fullName, shortName, btnElement) {
+            currentColor = fullName;
+            currentShortColor = shortName;
+
+            // ອັບເດດຂໍ້ຄວາມສີ
+            document.getElementById('selected-color-label').textContent = fullName;
+            document.getElementById('badge-color-text').textContent = `ສີ: ${shortName}`;
+
+            // ປ່ຽນສະໄຕລ໌ປຸ່ມສີທີ່ຖືກເລືອກ
+            document.querySelectorAll('.color-btn').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-amber-400', 'ring-offset-2', 'ring-offset-slate-950');
+                btn.classList.add('opacity-80');
+            });
+            btnElement.classList.add('ring-2', 'ring-amber-400', 'ring-offset-2', 'ring-offset-slate-950');
+            btnElement.classList.remove('opacity-80');
+
+            updateOrderLinks();
+        }
+
+        function selectStorage(storage, price, btnElement) {
+            currentStorage = storage;
+            currentPrice = price;
+
+            // ອັບເດດລາຄາ
+            document.getElementById('display-price').textContent = price;
+
+            // ປ່ຽນສະໄຕລ໌ປຸ່ມຄວາມຈຳທີ່ຖືກເລືອກ
+            document.querySelectorAll('.storage-btn').forEach(btn => {
+                btn.className = 'storage-btn bg-slate-900 text-slate-300 hover:text-white font-bold py-3 px-4 rounded-xl border-2 border-slate-700 hover:border-amber-400/60 transition text-sm sm:text-base';
+            });
+            btnElement.className = 'storage-btn bg-amber-400 text-slate-950 font-extrabold py-3 px-4 rounded-xl border-2 border-amber-400 shadow-md transition text-sm sm:text-base';
+
+            updateOrderLinks();
+        }
+    </script>
+
+</body>
+</html>
